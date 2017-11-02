@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Cross Origin</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:3000/styles/style.css" />
+  </head>
+  <body>
+    <h1>Server 2</h1>
+    <img src="http://localhost:3000/images/charmander.png" />
+    <img src="https://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/250px-001Bulbasaur.png" />
+    <div>
+        <h3>Data</h3>
+        <p id="data">
+
+        </p>
+      </div>
+    <script>
+        fetch('http://localhost:3000/get-subjects-data')
+          .then(response => response.json())
+          .then(result => {
+            // Won't work!
+            console.log(result);
+            document.getElementById("data").innerText = result[0].code + ':' + result[0].description;
+          })
+
+      </script>
+  </body>
+</html>

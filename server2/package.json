@@ -1,0 +1,6 @@
+{
+  "name": "cross-origin",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
